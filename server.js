@@ -32,7 +32,7 @@ app.param('collectionName', function(req, res, next, collectionName){
 })
 
 app.get('/', function(req, res, next) {
-  res.send(index.html)
+  res.send('./index.html')
 })
 
 app.get('/collections/:collectionName', function(req, res, next) {
