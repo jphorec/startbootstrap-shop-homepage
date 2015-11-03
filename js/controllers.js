@@ -5,3 +5,4 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
     $scope.polls = Poll.query(); //fetch all movies. Issues a GET to /api/movies
 
 });
+
