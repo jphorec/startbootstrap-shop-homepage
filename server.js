@@ -4,6 +4,9 @@ var express = require('express')
 
 var app = express()
 app.use(bodyParser())
+var engines = require('consolidate');
+
+app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 
 var db = mongoskin.db('mongodb://dbadmin:dbpassword@ds049744.mongolab.com:49744/heroku_5q9qxh3r', {safe:true})
