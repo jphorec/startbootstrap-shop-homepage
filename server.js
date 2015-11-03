@@ -1,7 +1,7 @@
 var express = require('express')
   , mongoskin = require('mongoskin')
   , bodyParser = require('body-parser')
-
+var restservice = require('./routes/restservice');
 var app = express()
 app.use(bodyParser())
 var engines = require('consolidate');
@@ -30,8 +30,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use("/", routes);
-app.use('/users', restservice);
+app.use('/service', restservice);
 
 
 app.get('/', function(req, res, next) {
