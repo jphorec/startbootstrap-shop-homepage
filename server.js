@@ -31,7 +31,11 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
-
+// Make our db accessible to our router
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
 app.use('/service', restservice);
 
 
