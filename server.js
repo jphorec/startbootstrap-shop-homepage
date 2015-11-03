@@ -1,7 +1,7 @@
 var express = require('express')
   , mongoskin = require('mongoskin')
   , bodyParser = require('body-parser')
-var restservice = require('/routes/restservice');
+var restservice = require('./routes/restservice');
 var app = express()
 app.use(bodyParser())
 var engines = require('consolidate');
