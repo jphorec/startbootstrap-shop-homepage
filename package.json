@@ -7,6 +7,6 @@
     "body-parser": "^1.0.2",
     "express": "3.x",
     "mongoskin": "^1.4.1",
-    "mongodb" : "Latest"
+    "mongodb" : "latest"
   }
 }
