@@ -6,11 +6,6 @@ var router = express.Router();
 
 
 
-
-router.get('/', function(req, res) {
-    res.send('Must Include Collection Name')
-})
-
 router.get('/polls', function(req, res, next) {
     var db = req.db;
     var collection = db.get('Polls');
