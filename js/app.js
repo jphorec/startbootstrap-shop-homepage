@@ -6,7 +6,7 @@ angular.module('pollApp', ['ui.router', 'ngResource', 'pollApp.controllers', 'po
 angular.module('pollApp').config(function($stateProvider) {
     $stateProvider.state('polls', { // state for showing all polls
         url: '/polls',
-        templateUrl: 'partials/polls.html',
+        templateUrl: '/views/partials/polls.html',
         controller: 'PollListController'
     });
 }).run(function($state) {
