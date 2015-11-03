@@ -1,7 +1,7 @@
 var express = require('express')
   , mongoskin = require('mongoskin')
   , bodyParser = require('body-parser')
-var restservice = require('./routes/restservice');
+var restservice = require('/routes/restservice');
 var app = express()
 app.use(bodyParser())
 var engines = require('consolidate');
@@ -10,6 +10,7 @@ app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/js", express.static(__dirname + '/js'));
+app.use("/partials", express.static(__dirname + '/partials'));
 var db = mongoskin.db('mongodb://dbadmin:dbpassword@ds049744.mongolab.com:49744/heroku_5q9qxh3r', {safe:true})
 // Add headers
 app.use(function (req, res, next) {
