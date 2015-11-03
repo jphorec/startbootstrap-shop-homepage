@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
     res.send('Must Include Collection Name')
 })
 
-router.get('/polls/', function(req, res, next) {
+router.get('/polls', function(req, res, next) {
     var db = req.db;
     var collection = db.get('Polls');
     collection.find({} ,{limit:10, sort: [['_id',-1]]}).toArray(function(e, results){
