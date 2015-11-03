@@ -30,8 +30,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-
-app.use('/users', routes/restservice);
+app.use("/", routes);
+app.use('/users', restservice);
 
 
 app.get('/', function(req, res, next) {
