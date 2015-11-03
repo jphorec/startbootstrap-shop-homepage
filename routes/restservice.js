@@ -2,7 +2,7 @@
  * Created by josh.horecny on 11/3/15.
  */
 var express = require('express');
-var router = express();
+var router = express.Router();
 
 
 
