@@ -10,7 +10,7 @@ app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/js", express.static(__dirname + '/js'));
-app.use("/partials", express.static(__dirname + '/partials'));
+app.use("/views/partials", express.static(__dirname + '/views/partials'));
 var db = mongoskin.db('mongodb://dbadmin:dbpassword@ds049744.mongolab.com:49744/heroku_5q9qxh3r', {safe:true})
 // Add headers
 app.use(function (req, res, next) {
