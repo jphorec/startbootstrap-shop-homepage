@@ -1,0 +1,11 @@
+{
+  "name": "poll-repo",
+  "description": "Polling Application",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.0.2",
+    "express": "3.x",
+    "mongoskin": "^1.4.1"
+  }
+}
