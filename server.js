@@ -35,7 +35,7 @@ app.param('collectionName', function(req, res, next, collectionName){
   return next()
 })
 
-app.get('/', function(req, res, next) {
+app.get('/init/', function(req, res, next) {
   res.render('./index')
 })
 
