@@ -6,15 +6,15 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 
 }).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
 
-    $scope.poll= Poll;
-    $scope.poll.pollValues = [];
-    $scope.poll.timeStamp = "22222222";
-    $scope.poll.totalVotes = "0";
-    $scope.poll.poll_id = "222";
+    $scope.poll = [new Poll()];
+    $scope.poll[0].pollValues = [];
+    $scope.poll[0].timeStamp = "22222222";
+    $scope.poll[0].totalVotes = "0";
+    $scope.poll[0].poll_id = "222";
 
     $scope.addPoll=function(){
-        $scope.poll.$save(function(){
-            $scope.uploadFile(poll.pollImage);
+        $scope.poll[0].$save(function(){
+            $scope.uploadFile(poll[0].pollImage);
             $state.go('polls');
         });
     }
