@@ -11,11 +11,10 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
     $scope.poll.timeStamp = "22222222";
     $scope.poll.totalVotes = "0";
     $scope.poll.poll_id = "222";
+    $scope.poll.pollImage = "images/images.jpeg";
 
     $scope.addPoll=function(){
         $scope.poll.$save(function(){
-            var image = $scope.poll.pollImage;
-            alert(image);
           // $scope.uploadFile($scope.poll.pollImage);
             $state.go('polls');
         });
