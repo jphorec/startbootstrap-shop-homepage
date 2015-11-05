@@ -2,7 +2,15 @@
  * Created by josh.horecny on 11/2/15.
  */
 angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
-    $scope.polls = Poll.query(); //fetch all movies. Issues a GET to /api/movies
+    $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
 
+}).controller('PollCreateController',function($scope,$state,$stateParams,Poll){
+
+    $scope.poll=new Poll();
+
+    $scope.addPoll=function(){
+        $scope.poll.$save(function(){
+            $state.go('polls');
+        });
+    }
 });
-

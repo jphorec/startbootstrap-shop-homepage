@@ -8,6 +8,10 @@ angular.module('pollApp').config(function($stateProvider) {
         url: '/polls',
         templateUrl: '/views/partials/polls.html',
         controller: 'PollListController'
+    }).state('newPoll', { // state for showing all polls
+        url: '/polls/new',
+        templateUrl: '/views/partials/newPoll.html',
+        controller: 'PollCreateController'
     });
 }).run(function($state) {
     $state.go('polls'); //make a transition to polls state when app starts
