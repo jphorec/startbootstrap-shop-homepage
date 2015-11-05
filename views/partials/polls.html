@@ -8,7 +8,7 @@
 
                 <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="poll in polls">
                     <div class="thumbnail">
-                        <img src="{{poll.pollImage}}" width="320" height="150">
+                        <img ng-src="{{poll.pollImage}}" width="320" height="150">
                         <div class="caption">
                             <h4><a href="#{{poll._id}}" data-toggle="modal">{{poll.pollName}}</a>
                             </h4>
