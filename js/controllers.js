@@ -1,7 +1,7 @@
 /**
  * Created by josh.horecny on 11/2/15.
  */
-angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
+angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $http, $state, $window, Poll) {
     $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
 
 }).controller('PollCreateController',function($scope,$state,$stateParams,Poll){
