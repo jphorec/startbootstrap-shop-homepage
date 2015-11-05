@@ -14,3 +14,15 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
         });
     }
 });
+$scope.uploadFile = function(files) {
+    var fd = new FormData();
+    //Take the first selected file
+    fd.append("file", files[0]);
+
+    $http.post('/images/', fd, {
+        withCredentials: true,
+        headers: {'Content-Type': undefined },
+        transformRequest: angular.identity
+    }).success(' ...all right!... ').error(' ..damn!... ');
+
+};
