@@ -7,6 +7,7 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 }).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
 
     $scope.poll=new Poll();
+    $scope.poll.pollValues = [];
 
     $scope.addPoll=function(){
         $scope.poll.$save(function(){
