@@ -6,7 +6,7 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 
 }).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
 
-    $scope.poll=new Poll();
+    $scope.poll= Poll;
     $scope.poll.pollValues = [];
     $scope.poll.timeStamp = "22222222";
     $scope.poll.totalVotes = "0";
