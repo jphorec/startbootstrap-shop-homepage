@@ -14,6 +14,8 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 
     $scope.addPoll=function(){
         $scope.poll.$save(function(){
+            var image = $scope.poll.pollImage;
+            alert(image);
           // $scope.uploadFile($scope.poll.pollImage);
             $state.go('polls');
         });
