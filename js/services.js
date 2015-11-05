@@ -4,7 +4,7 @@
 angular.module('pollApp.services', []).factory('Poll', function($resource) {
     return $resource('/collections/Polls/:id', { id: '@_id' }, {
         save: {
-            method: 'POST', isArray : true
+            method: 'POST', isArray : false
         }
     });
 });
