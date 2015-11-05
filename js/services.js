@@ -3,8 +3,10 @@
  */
 angular.module('pollApp.services', []).factory('Poll', function($resource) {
     return $resource('/collections/Polls/:id', { id: '@_id' }, {
-        save: {
-            method: 'POST', isArray : false
-        }
+        'get':    {method:'GET'},
+        'save':   {method:'POST'},
+        'query':  {method:'GET', isArray:false},
+        'remove': {method:'DELETE'},
+        'delete': {method:'DELETE'}
     });
 });
