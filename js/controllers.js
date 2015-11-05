@@ -1,10 +1,10 @@
 /**
  * Created by josh.horecny on 11/2/15.
  */
-angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $http, $state, $window, Poll) {
+angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
     $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
 
-}).controller('PollCreateController',function($scope,$state,$stateParams,Poll){
+}).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
 
     $scope.poll=new Poll();
 
@@ -25,6 +25,6 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
             transformRequest: angular.identity
         }).success(' ...all right!... ').error(' ..damn!... ');
 
-    };
+    }
 });
 
