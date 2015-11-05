@@ -11,19 +11,19 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Poll Name:</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Enter Poll Name">
+                <input type="text" ng-model="poll.pollName" class="form-control" id="email" placeholder="Enter Poll Name">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Description:</label>
             <div class="col-sm-10">
-                <input class="form-control" id="pwd" placeholder="Enter Description">
+                <input type="text" ng-model="poll.pollDescription" class="form-control" id="pwd" placeholder="Enter Description">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="pic">Poll Image:</label>
             <div class="col-sm-10">
-                <input  type="file" id="pic" accept="images/*">
+                <input ng-model="poll.pollImage" type="file" id="pic" accept="images/*">
             </div>
         </div>
 
