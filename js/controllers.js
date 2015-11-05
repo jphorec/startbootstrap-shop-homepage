@@ -8,7 +8,9 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 
     $scope.poll=new Poll();
     $scope.poll.pollValues = [];
-
+    $scope.poll.timeStamp = "22222222";
+    $scope.poll.totalVotes = "0";
+    $scope.poll.poll_id = "222";
     $scope.addPoll=function(){
         $scope.poll.$save(function(){
             $scope.uploadFile(poll.pollImage);
