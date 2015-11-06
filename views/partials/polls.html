@@ -20,6 +20,7 @@
                         </div>
                     </div>
                 </div>
+<form ng-submit="submitVote()">
 <div ng-repeat="poll in polls">
                 <div class="row modal fade" ng-model="poll._id" id="{{poll._id}}" role="dialog" >
                     <div class="col-md-4 col-md-offset-4">
@@ -57,7 +58,7 @@
                                     </div>
                             </div>
                             <div class="panel-footer modal-footer">
-                                <a href="#" class="btn btn-success btn-sm btn-primary"> Mark Your Vote</a>
+                                <input type="submit" class="btn btn-success btn-sm btn-primary"> Mark Your Vote</input>
 
 
                                 <a href="#" class="btn btn-success btn-sm btn-default"> Submit Idea</a>
@@ -69,6 +70,7 @@
 
                     </div>
                     </div>
+</form>
 <!-- /.container -->
 </body>
 </html>
