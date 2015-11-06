@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-<form name="myForm" ng-controller="PollListController" ng-submit="submitVote()">
+<form name="myForm" ng-controller="PollVoteController" ng-submit="submitVote()">
 <div ng-repeat="poll in polls">
                 <div class="row modal fade" ng-model="poll._id" id="{{poll._id}}" role="dialog" >
                     <div class="col-md-4 col-md-offset-4">
@@ -39,7 +39,7 @@
                                 <div ng-repeat="pollValue in poll.pollValues | orderBy: '-votes'">
                                 <div class="radio">
                                     <label>
-                                        <input ng-model="$parent.pollVote" value="{{pollValue.text}}"; type="radio" name="group-poll">
+                                        <input ng-model="$parent.pollVote" id="{{$parent._id}}" value="{{pollValue.text}}"; type="radio" name="group-poll">
                                         <strong>{{pollValue.text}}</strong>
                                         <br>&#09;{{pollValue.description}}
                                     </label>
