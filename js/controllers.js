@@ -43,7 +43,7 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
     }
 }).controller('PollVoteController', function($scope, $state, $window, Poll) {
     $scope.submitVote=function(){
-        alert($scope.polls.getAttribute("pollName"));
+        alert("yes");
         $state.go('polls');
     }
 
