@@ -3,9 +3,7 @@
  */
 angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
     $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
-    $scope.submitVote=function(){
-        alert($parent.pollVote);
-    }
+
 
 
 }).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
@@ -46,6 +44,7 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
 }).controller('PollVoteController', function($scope, $state, $window, Poll) {
     $scope.submitVote=function(){
         alert($scope.poll);
+        $state.go('polls');
     }
 
 
