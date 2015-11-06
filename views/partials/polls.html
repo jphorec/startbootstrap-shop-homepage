@@ -37,7 +37,7 @@
                                 <div ng-repeat="pollValue in poll.pollValues | orderBy: '-votes'">
                                 <div class="radio">
                                     <label>
-                                        <input ng-model="pollVotes.text" value="{{pollValue.text}}"; type="radio" name="group-poll">
+                                        <input ng-model="pollVote" value="{{pollValue.text}}"; type="radio" name="group-poll">
                                         <strong>{{pollValue.text}}</strong>
                                         <br>&#09;{{pollValue.description}}
                                     </label>

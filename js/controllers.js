@@ -4,11 +4,7 @@
 angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
     $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
     $scope.submitVote=function(){
-        alert($scope.poll.pollValues.text);
-        for(var key in $scope.pollVotes){
-            var value = $scope.pollVotes[key];
-            alert(value);
-        }
+        alert($scope.pollVote);
     }
 
 
