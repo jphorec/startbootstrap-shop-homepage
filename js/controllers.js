@@ -32,5 +32,12 @@ angular.module('pollApp.controllers', []).controller('PollListController', funct
         }).success(' ...all right!... ').error(' ..damn!... ');
 
     }
+}).controller('PollVoteController',function($scope,$state,$stateParams,Poll){
+
+    $scope.updatePoll=function(){
+        $scope.poll.$update(function(){
+            $state.go('polls');
+        });
+    }
 });
 
