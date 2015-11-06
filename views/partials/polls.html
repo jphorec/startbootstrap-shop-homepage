@@ -39,14 +39,14 @@
                                 <div ng-repeat="pollValue in poll.pollValues | orderBy: '-votes'">
                                 <div class="radio">
                                     <label>
-                                        <input ng-model="pollVote" value="{{pollValue.text}}"; type="radio" name="group-poll">
+                                        <input ng-model="$parent.pollVote" value="{{pollValue.text}}"; type="radio" name="group-poll">
                                         <strong>{{pollValue.text}}</strong>
                                         <br>&#09;{{pollValue.description}}
                                     </label>
                                     </div>
-
+                                    <div>currently selected: {{pollVote}}</div>
                                 </div>
-                                <div>currently selected: {{pollVote}}</div>
+
                                 <hr />
                                 <h5 class="text-danger">Result Of User Votes :</h5>
                                 <hr />
