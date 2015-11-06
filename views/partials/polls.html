@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-<form ng-submit="submitVote()">
+<form name="myForm" ng-controller="PollListController" ng-submit="submitVote()">
 <div ng-repeat="poll in polls">
                 <div class="row modal fade" ng-model="poll._id" id="{{poll._id}}" role="dialog" >
                     <div class="col-md-4 col-md-offset-4">
