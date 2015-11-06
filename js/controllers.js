@@ -4,6 +4,11 @@
 angular.module('pollApp.controllers', []).controller('PollListController', function($scope, $state, $window, Poll) {
     $scope.polls = Poll.query(); //fetch all polls. Issues a GET to /collections/Polls
 
+    for(var key in $scope.pollVotes){
+        var value = $scope.pollVotes[key];
+        alert(value);
+    }
+
 }).controller('PollCreateController',function($scope,$http, $state,$stateParams,Poll){
 
     $scope.poll = new Poll();
